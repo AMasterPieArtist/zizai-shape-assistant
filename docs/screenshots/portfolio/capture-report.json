@@ -1,0 +1,59 @@
+{
+  "captured_at": "2026-10-11T15:09:55.013Z",
+  "profile": "Synthetic adult 小满, busy workday",
+  "real_model_calls": 0,
+  "isolated_database": true,
+  "swimming_removed_after_confirmation": true,
+  "mobile_overflow": false,
+  "page_errors": [],
+  "captures": [
+    {
+      "file": "docs/screenshots/portfolio/01-welcome.png",
+      "route": "#welcome",
+      "synthetic": true,
+      "mode": "demo"
+    },
+    {
+      "file": "docs/screenshots/portfolio/02-today.png",
+      "route": "#home",
+      "synthetic": true,
+      "mode": "demo"
+    },
+    {
+      "file": "docs/screenshots/portfolio/03-strategy.png",
+      "route": "#strategy",
+      "synthetic": true,
+      "mode": "demo"
+    },
+    {
+      "file": "docs/screenshots/portfolio/04-meal-search.png",
+      "route": "#lunch",
+      "synthetic": true,
+      "mode": "demo"
+    },
+    {
+      "file": "docs/screenshots/portfolio/05-takeout.png",
+      "route": "#takeout",
+      "synthetic": true,
+      "mode": "demo"
+    },
+    {
+      "file": "docs/screenshots/portfolio/06-drinks.png",
+      "route": "#snacks",
+      "synthetic": true,
+      "mode": "demo"
+    },
+    {
+      "file": "docs/screenshots/portfolio/07-adjustment.png",
+      "route": "#adjust",
+      "synthetic": true,
+      "mode": "demo"
+    },
+    {
+      "file": "docs/screenshots/portfolio/08-mobile.png",
+      "route": "#home",
+      "synthetic": true,
+      "mode": "demo"
+    }
+  ]
+}

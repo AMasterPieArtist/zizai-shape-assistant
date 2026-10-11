@@ -1,0 +1,23 @@
+// Uses synthetic data only; no browser state or personal database access.
+const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
+const path=require('node:path');
+const source=fs.readFileSync(path.join(__dirname,'../web/app.js'),'utf8');
+const code=source.slice(source.indexOf('function activityDiffView('),source.indexOf('function draftView('));
+const ctx={esc:s=>String(s).replaceAll('&','&amp;').replaceAll('<','&lt;')};
+vm.createContext(ctx);vm.runInContext(code,ctx);
+const swim={entry_id:'swim',name:'休闲游泳',minutes:30};
+const walk={entry_id:'walk',name:'中速步行',minutes:10};
+const before={activities:[swim,walk],movement:'休息建议'};
+const unchanged=ctx.activityDiffView(before,before);
+assert(unchanged.includes('休闲游泳 · 30 分钟'));
+assert(unchanged.includes('运动项目保持不变'));
+assert(!unchanged.includes('取消：'));
+const removed=ctx.activityDiffView(before,{activities:[walk],movement:'取消游泳'});
+assert(removed.includes('取消：休闲游泳 · 30 分钟'));
+assert(removed.includes('中速步行 · 10 分钟'));
+const empty=ctx.activityDiffView(before,{activities:[],movement:'休息'});
+assert(empty.includes('没有已安排的运动'));
+assert.equal(ctx.activityDiffView({activities:[],movement:'休息'},{activities:[],movement:'休息'}),'');
+const escaped=ctx.activityDiffView({activities:[{...swim,name:'<script>'}],movement:''},{activities:[],movement:''});
+assert(!escaped.includes('<script>'));
+console.log('PASS: unchanged, removed, empty and escaped exercise comparisons');

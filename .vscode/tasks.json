@@ -1,0 +1,7 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {"label": "自在身材：启动后端", "type": "shell", "command": "python", "args": ["app.py"], "problemMatcher": []},
+    {"label": "自在身材：运行测试", "type": "shell", "command": "python", "args": ["-m", "unittest", "discover", "-s", "tests", "-v"], "group": "test", "problemMatcher": []}
+  ]
+}

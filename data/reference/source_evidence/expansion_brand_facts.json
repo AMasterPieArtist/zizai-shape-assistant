@@ -1,0 +1,72 @@
+[
+  {
+    "record_id": "mcd_cn_main_mcchicken",
+    "name_cn": "麦香鸡",
+    "portion_label": "1个",
+    "source_url": "https://www.mcdonalds.com.cn/product/McChicken",
+    "source_release": "2025-04",
+    "retrieved_date": "2026-10-11",
+    "energy_kj_original": 1546,
+    "protein_g": 15,
+    "fat_g": 17,
+    "carbs_g": 39,
+    "sodium_mg": 731,
+    "calcium_mg": 73
+  },
+  {
+    "record_id": "mcd_cn_main_grilled_chicken_sandwich",
+    "name_cn": "板烧鸡腿堡",
+    "portion_label": "1个",
+    "source_url": "https://www.mcdonalds.com.cn/product/Grilled-Chicken-Sandwich",
+    "source_release": "2025-04",
+    "retrieved_date": "2026-10-11",
+    "energy_kj_original": 1638,
+    "protein_g": 23,
+    "fat_g": 17,
+    "carbs_g": 35,
+    "sodium_mg": 1041,
+    "calcium_mg": 93
+  },
+  {
+    "record_id": "mcd_cn_main_filet_o_fish",
+    "name_cn": "麦香鱼",
+    "portion_label": "1个",
+    "source_url": "https://www.mcdonalds.com.cn/product/Filet-O-Fish",
+    "source_release": "2025-04",
+    "retrieved_date": "2026-10-11",
+    "energy_kj_original": 1359,
+    "protein_g": 16,
+    "fat_g": 13,
+    "carbs_g": 35,
+    "sodium_mg": 556,
+    "calcium_mg": 99
+  },
+  {
+    "record_id": "mcd_cn_main_cheeseburger",
+    "name_cn": "吉士汉堡包",
+    "portion_label": "1个",
+    "source_url": "https://www.mcdonalds.com.cn/product/Cheeseburger",
+    "source_release": "2025-04",
+    "retrieved_date": "2026-10-11",
+    "energy_kj_original": 1231,
+    "protein_g": 16,
+    "fat_g": 12,
+    "carbs_g": 30,
+    "sodium_mg": 673,
+    "calcium_mg": 144
+  },
+  {
+    "record_id": "mcd_cn_main_big_mac",
+    "name_cn": "巨无霸",
+    "portion_label": "1个",
+    "source_url": "https://www.mcdonalds.com.cn/product/Big-Mac",
+    "source_release": "2025-04",
+    "retrieved_date": "2026-10-11",
+    "energy_kj_original": 2146,
+    "protein_g": 27,
+    "fat_g": 26,
+    "carbs_g": 42,
+    "sodium_mg": 961,
+    "calcium_mg": 171
+  }
+]

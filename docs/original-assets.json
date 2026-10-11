@@ -1,0 +1,22 @@
+{
+  "index.html": {
+    "sha256": "c1f55a20f3f984dfb74d2738084f62f43f81619a960e5f3aa883f62ea13e6cc1",
+    "bytes": 1428
+  },
+  "app.js": {
+    "sha256": "cb9c6a0b0dd5c3fff3a5b05cd5ec0086b6887f2a1d09aa0d7ebcf6e76e9aff31",
+    "bytes": 14538
+  },
+  "extras.js": {
+    "sha256": "b119546fa5eac0657a4c6068aa07eab3e1ab7c913c9f842e265cbf4b86e84571",
+    "bytes": 13226
+  },
+  "food.jpg": {
+    "sha256": "3cccf51eed72e2dbdca1673b3d5c63046d9a6302d694ffed3350adabbdc3cb7c",
+    "bytes": 247675
+  },
+  "style.css": {
+    "sha256": "4f4aec5e9e6164bb16d976fcacbeaac3c6a10a0303479126bc4022e516bafcca",
+    "bytes": 8775
+  }
+}

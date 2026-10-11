@@ -1,0 +1,84 @@
+// Optional UI verification against a disposable database. Never opens personal data.
+const {chromium}=require(process.env.PLAYWRIGHT_PATH || 'playwright');
+const fs=require('node:fs'),path=require('node:path'),os=require('node:os'),assert=require('node:assert/strict');
+const {spawn}=require('node:child_process');
+const root=path.resolve(__dirname,'..'),temp=fs.mkdtempSync(path.join(os.tmpdir(),'zizai-catalog-'));
+let browser,server,port,base;
+(async()=>{
+  const probe=require('node:net').createServer();
+  await new Promise(r=>probe.listen(0,'127.0.0.1',r));port=probe.address().port;
+  await new Promise(r=>probe.close(r));base=`http://127.0.0.1:${port}`;
+  server=spawn(process.env.PYTHON || 'python',['app.py','--port',String(port),'--db',path.join(temp,'test.sqlite3')],{cwd:root,windowsHide:true,stdio:'ignore'});
+  let ready=false;
+  for(let i=0;i<80;i++){try{if((await fetch(base+'/api/status')).ok){ready=true;break;}}catch{} await new Promise(r=>setTimeout(r,100));}
+  assert(ready,'Test server did not start');
+  browser=await chromium.launch({channel:'msedge',headless:true});
+  const page=await browser.newPage({viewport:{width:1440,height:1000}}),errors=[];
+  page.on('pageerror',e=>errors.push(e.message));
+  await page.goto(base);
+  await page.waitForFunction(()=>state.initialized);
+  await page.evaluate(async()=>{
+    const p={...defaults,nickname:'数据接入测试',meal_sources:['canteen','delivery'],health_status:'general',exclusions:[],ai_consent:false};
+    await api('/api/profile',{profile:p,expected_version:0},'PUT');
+    await api('/api/plans/generate',{date:state.day,mode:'demo'});
+  });
+  await page.reload();await page.waitForFunction(()=>state.initialized&&state.plan);
+  assert.equal(await page.evaluate(()=>state.status.catalog.foods),80);
+  const baseline=await page.evaluate(()=>state.plan.totals.kcal);
+  await page.locator('#nav a[href="#activity"]').click();
+  await page.getByRole('button',{name:'添加运动',exact:true}).click();
+  await page.waitForFunction(()=>!state.busy&&state.plan.activities.length===1);
+  await page.locator('#nav a[href="#snacks"]').click();
+  await page.locator('#snacksearch input[name=q]').fill('热奶铁');
+  await page.locator('#snacksearch button').click();
+  assert.equal(await page.locator('.option').count(),3);
+  const id=await page.locator('.option').filter({hasText:'中 · 官方标准配方'}).locator('[data-action="add-snack"]').getAttribute('data-id');
+  await page.locator(`[data-action="add-snack"][data-id="${id}"]`).click();
+  await page.waitForFunction(()=>!state.busy&&state.plan.snacks.length===1);
+  const extra=await page.evaluate(()=>state.plan.snacks[0].nutrition.kcal);
+  await page.locator('#nav a[href="#lunch"]').click();
+  await page.locator('#meal-family').selectOption({label:'米粉米线'});
+  const selectedBefore=await page.evaluate(()=>state.plan.meals.lunch.selected.id);
+  await page.getByRole('button',{name:'换一批',exact:true}).click();
+  await page.waitForFunction(()=>!state.busy&&state.plan.meals.lunch.candidates.every(o=>o.meal_family==='米粉米线'));
+  assert.equal(await page.evaluate(()=>state.plan.meals.lunch.selected.id),selectedBefore);
+  assert.equal(await page.locator('.option').count(),3);
+  assert.equal(await page.locator('.option a').count(),3);
+  const mealDir=path.join(root,'docs','screenshots');fs.mkdirSync(mealDir,{recursive:true});
+  await page.screenshot({path:path.join(mealDir,'meal-types-desktop.png'),fullPage:true});
+  await page.setViewportSize({width:390,height:844});
+  await page.screenshot({path:path.join(mealDir,'meal-types-mobile.png'),fullPage:true});
+  assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'Meal page mobile horizontal overflow');
+  await page.setViewportSize({width:1440,height:1000});
+  await page.locator('#meal-family').selectOption({label:'品牌汉堡配餐'});
+  await page.getByRole('button',{name:'换一批',exact:true}).click();
+  await page.waitForFunction(()=>!state.busy&&state.plan.meals.lunch.candidates.every(o=>o.meal_family==='品牌汉堡配餐'));
+  assert((await page.locator('.option').first().innerText()).includes('1个（官方标准配方；克重未公布）'));
+  await page.getByRole('button',{name:'选择这个',exact:true}).first().click();
+  await page.waitForFunction(()=>!state.busy&&state.plan.meals.lunch.selected.id.includes('-brand-'));
+  assert.equal(await page.evaluate(()=>state.plan.activities[0].kind),'swim');
+  await page.locator('#nav a[href="#snacks"]').click();
+  const dir=path.join(root,'docs','screenshots');fs.mkdirSync(dir,{recursive:true});
+  await page.screenshot({path:path.join(dir,'catalog-desktop.png'),fullPage:true});
+  await page.locator('#nav a[href="#home"]').click();
+  assert((await page.locator('.banner').first().innerText()).includes(Math.round((await page.evaluate(()=>state.plan.totals.kcal))+extra).toLocaleString('zh-CN')));
+  await page.reload();await page.waitForFunction(()=>state.initialized&&state.plan);
+  assert.equal(await page.evaluate(()=>state.plan.activities[0].kind),'swim');
+  assert.equal(await page.evaluate(()=>state.plan.snacks[0].id),id);
+  await page.locator('#nav a[href="#foods"]').click();
+  await page.waitForFunction(()=>location.hash==='#foods'&&document.querySelectorAll('tbody tr').length===80);
+  assert.equal(await page.locator('tbody tr').count(),80);
+  await page.locator('#nav a[href="#snacks"]').click();
+  await page.setViewportSize({width:390,height:844});
+  await page.locator('#snacksearch input[name=q]').fill('拿铁');
+  await page.locator('#snacksearch button').click();
+  await page.screenshot({path:path.join(dir,'catalog-mobile.png'),fullPage:true});
+  assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'Mobile horizontal overflow');
+  assert.deepEqual(errors,[]);
+  console.log(JSON.stringify({result:'PASS',foods:80,selectableSnacks:58,brandAdded:id,swimPreserved:true,energyIncludesDrink:true,mealTypeFilter:true,brandUnitPreserved:true,mobileOverflow:false,consoleErrors:errors}));
+})().catch(e=>{console.error(e);process.exitCode=1;}).finally(async()=>{
+  if(browser)await browser.close();
+  if(server&&server.exitCode===null){const stopped=new Promise(r=>server.once('exit',r));server.kill();await stopped;}
+  fs.rmSync(temp,{recursive:true,force:true});
+});
+

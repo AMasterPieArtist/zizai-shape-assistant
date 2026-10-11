@@ -1,0 +1,600 @@
+[
+  {
+    "url": "https://www.mcdonalds.com.cn/product/Coca-Cola",
+    "name": "可口可乐",
+    "source_release": "2025-04",
+    "nutrition_tables": [
+      {
+        "portion_label": "小",
+        "original_values": {
+          "能量": 446.0,
+          "蛋白质": 0.0,
+          "脂肪": 0.0,
+          "碳水化合物": 26.0,
+          "钠": 0.0,
+          "钙": 7.0
+        }
+      },
+      {
+        "portion_label": "中",
+        "original_values": {
+          "能量": 616.0,
+          "蛋白质": 0.0,
+          "脂肪": 0.0,
+          "碳水化合物": 36.0,
+          "钠": 0.0,
+          "钙": 10.0
+        }
+      },
+      {
+        "portion_label": "大",
+        "original_values": {
+          "能量": 936.0,
+          "蛋白质": 0.0,
+          "脂肪": 0.0,
+          "碳水化合物": 55.0,
+          "钠": 0.0,
+          "钙": 15.0
+        }
+      }
+    ]
+  },
+  {
+    "url": "https://www.mcdonalds.com.cn/product/Coca-Cola-Zero",
+    "name": "无糖可口可乐",
+    "source_release": "2025-04",
+    "nutrition_tables": [
+      {
+        "portion_label": "小",
+        "original_values": {
+          "能量": 0.0,
+          "蛋白质": 0.0,
+          "脂肪": 0.0,
+          "碳水化合物": 0.0,
+          "钠": 25.0,
+          "钙": 0.0
+        }
+      },
+      {
+        "portion_label": "中",
+        "original_values": {
+          "能量": 0.0,
+          "蛋白质": 0.0,
+          "脂肪": 0.0,
+          "碳水化合物": 1.0,
+          "钠": 35.0,
+          "钙": 0.0
+        }
+      },
+      {
+        "portion_label": "大",
+        "original_values": {
+          "能量": 0.0,
+          "蛋白质": 0.0,
+          "脂肪": 0.0,
+          "碳水化合物": 1.0,
+          "钠": 53.0,
+          "钙": 0.0
+        }
+      }
+    ]
+  },
+  {
+    "url": "https://www.mcdonalds.com.cn/product/Sprite",
+    "name": "雪碧",
+    "source_release": "2025-04",
+    "nutrition_tables": [
+      {
+        "portion_label": "小",
+        "original_values": {
+          "能量": 319.0,
+          "蛋白质": 0.0,
+          "脂肪": 0.0,
+          "碳水化合物": 19.0,
+          "钠": 21.0,
+          "钙": 0.0
+        }
+      },
+      {
+        "portion_label": "中",
+        "original_values": {
+          "能量": 440.0,
+          "蛋白质": 0.0,
+          "脂肪": 0.0,
+          "碳水化合物": 26.0,
+          "钠": 29.0,
+          "钙": 0.0
+        }
+      },
+      {
+        "portion_label": "大",
+        "original_values": {
+          "能量": 669.0,
+          "蛋白质": 0.0,
+          "脂肪": 0.0,
+          "碳水化合物": 39.0,
+          "钠": 45.0,
+          "钙": 0.0
+        }
+      }
+    ]
+  },
+  {
+    "url": "https://www.mcdonalds.com.cn/product/Fuze-Tea",
+    "name": "阳光柠檬红茶",
+    "source_release": "2025-04",
+    "nutrition_tables": [
+      {
+        "portion_label": "小",
+        "original_values": {
+          "能量": 354.0,
+          "蛋白质": 0.0,
+          "脂肪": 0.0,
+          "碳水化合物": 21.0,
+          "钠": 12.0,
+          "钙": 0.0
+        }
+      },
+      {
+        "portion_label": "中",
+        "original_values": {
+          "能量": 488.0,
+          "蛋白质": 0.0,
+          "脂肪": 0.0,
+          "碳水化合物": 29.0,
+          "钠": 17.0,
+          "钙": 0.0
+        }
+      },
+      {
+        "portion_label": "大",
+        "original_values": {
+          "能量": 743.0,
+          "蛋白质": 0.0,
+          "脂肪": 0.0,
+          "碳水化合物": 43.0,
+          "钠": 25.0,
+          "钙": 0.0
+        }
+      }
+    ]
+  },
+  {
+    "url": "https://www.mcdonalds.com.cn/product/Soybean-Milk",
+    "name": "优品豆浆",
+    "source_release": "2025-04",
+    "nutrition_tables": [
+      {
+        "portion_label": "小",
+        "original_values": {
+          "能量": 633.0,
+          "蛋白质": 6.0,
+          "脂肪": 3.0,
+          "碳水化合物": 25.0,
+          "钠": 32.0,
+          "钙": 15.0
+        }
+      },
+      {
+        "portion_label": "大",
+        "original_values": {
+          "能量": 844.0,
+          "蛋白质": 8.0,
+          "脂肪": 4.0,
+          "碳水化合物": 33.0,
+          "钠": 43.0,
+          "钙": 21.0
+        }
+      }
+    ]
+  },
+  {
+    "url": "https://www.mcdonalds.com.cn/product/Drink-11",
+    "name": "纯牛奶（盒装）",
+    "source_release": "2025-04",
+    "nutrition_tables": [
+      {
+        "portion_label": "默认",
+        "original_values": {
+          "能量": 541.0,
+          "蛋白质": 7.0,
+          "脂肪": 7.0,
+          "碳水化合物": 10.0,
+          "钠": 73.0,
+          "钙": 231.0
+        }
+      }
+    ]
+  },
+  {
+    "url": "https://www.mcdonalds.com.cn/product/Hot-Tea",
+    "name": "锡兰红茶",
+    "source_release": "2025-04",
+    "nutrition_tables": [
+      {
+        "portion_label": "默认",
+        "original_values": {
+          "能量": 8.0,
+          "蛋白质": 0.0,
+          "脂肪": 0.0,
+          "碳水化合物": 0.0,
+          "钠": 0.0,
+          "钙": 5.0
+        }
+      }
+    ]
+  },
+  {
+    "url": "https://www.mcdonalds.com.cn/product/Minute-Maid-100-Apple-Juice",
+    "name": "100%苹果汁",
+    "source_release": "2025-04",
+    "nutrition_tables": [
+      {
+        "portion_label": "1盒",
+        "original_values": {
+          "能量": 368.0,
+          "蛋白质": 0.0,
+          "脂肪": 0.0,
+          "碳水化合物": 21.0,
+          "钠": 0.0,
+          "钙": 0.0
+        }
+      }
+    ]
+  },
+  {
+    "url": "https://www.mcdonalds.com.cn/product/Hot-Americano",
+    "name": "热美式",
+    "source_release": "2025-04",
+    "nutrition_tables": [
+      {
+        "portion_label": "小",
+        "original_values": {
+          "能量": 41.0,
+          "蛋白质": 1.0,
+          "脂肪": 0.0,
+          "碳水化合物": 1.0,
+          "钠": 0.0,
+          "钙": 6.0
+        }
+      },
+      {
+        "portion_label": "中",
+        "original_values": {
+          "能量": 54.0,
+          "蛋白质": 1.0,
+          "脂肪": 0.0,
+          "碳水化合物": 2.0,
+          "钠": 0.0,
+          "钙": 7.0
+        }
+      },
+      {
+        "portion_label": "大",
+        "original_values": {
+          "能量": 60.0,
+          "蛋白质": 1.0,
+          "脂肪": 0.0,
+          "碳水化合物": 2.0,
+          "钠": 0.0,
+          "钙": 8.0
+        }
+      }
+    ]
+  },
+  {
+    "url": "https://www.mcdonalds.com.cn/product/Iced-Americano",
+    "name": "冰美式",
+    "source_release": "2025-04",
+    "nutrition_tables": [
+      {
+        "portion_label": "小",
+        "original_values": {
+          "能量": 41.0,
+          "蛋白质": 1.0,
+          "脂肪": 0.0,
+          "碳水化合物": 1.0,
+          "钠": 0.0,
+          "钙": 6.0
+        }
+      },
+      {
+        "portion_label": "中",
+        "original_values": {
+          "能量": 54.0,
+          "蛋白质": 1.0,
+          "脂肪": 0.0,
+          "碳水化合物": 2.0,
+          "钠": 0.0,
+          "钙": 7.0
+        }
+      },
+      {
+        "portion_label": "大",
+        "original_values": {
+          "能量": 60.0,
+          "蛋白质": 1.0,
+          "脂肪": 0.0,
+          "碳水化合物": 2.0,
+          "钠": 0.0,
+          "钙": 8.0
+        }
+      }
+    ]
+  },
+  {
+    "url": "https://www.mcdonalds.com.cn/product/Hot-Nai-Tie",
+    "name": "热奶铁",
+    "source_release": "2025-04",
+    "nutrition_tables": [
+      {
+        "portion_label": "小",
+        "original_values": {
+          "能量": 559.0,
+          "蛋白质": 8.0,
+          "脂肪": 6.0,
+          "碳水化合物": 12.0,
+          "钠": 72.0,
+          "钙": 231.0
+        }
+      },
+      {
+        "portion_label": "中",
+        "original_values": {
+          "能量": 779.0,
+          "蛋白质": 11.0,
+          "脂肪": 8.0,
+          "碳水化合物": 17.0,
+          "钠": 99.0,
+          "钙": 320.0
+        }
+      },
+      {
+        "portion_label": "大",
+        "original_values": {
+          "能量": 1040.0,
+          "蛋白质": 14.0,
+          "脂肪": 11.0,
+          "碳水化合物": 22.0,
+          "钠": 134.0,
+          "钙": 431.0
+        }
+      }
+    ]
+  },
+  {
+    "url": "https://www.mcdonalds.com.cn/product/Iced-Nai-Tie",
+    "name": "冰奶铁",
+    "source_release": "2025-04",
+    "nutrition_tables": [
+      {
+        "portion_label": "小",
+        "original_values": {
+          "能量": 358.0,
+          "蛋白质": 5.0,
+          "脂肪": 4.0,
+          "碳水化合物": 8.0,
+          "钠": 44.0,
+          "钙": 144.0
+        }
+      },
+      {
+        "portion_label": "中",
+        "original_values": {
+          "能量": 618.0,
+          "蛋白质": 8.0,
+          "脂肪": 7.0,
+          "碳水化合物": 13.0,
+          "钠": 77.0,
+          "钙": 251.0
+        }
+      },
+      {
+        "portion_label": "大",
+        "original_values": {
+          "能量": 678.0,
+          "蛋白质": 9.0,
+          "脂肪": 7.0,
+          "碳水化合物": 15.0,
+          "钠": 85.0,
+          "钙": 275.0
+        }
+      }
+    ]
+  },
+  {
+    "url": "https://www.mcdonalds.com.cn/product/Cappuccino",
+    "name": "卡布奇诺",
+    "source_release": "2025-04",
+    "nutrition_tables": [
+      {
+        "portion_label": "中",
+        "original_values": {
+          "能量": 698.0,
+          "蛋白质": 9.0,
+          "脂肪": 7.0,
+          "碳水化合物": 15.0,
+          "钠": 88.0,
+          "钙": 285.0
+        }
+      },
+      {
+        "portion_label": "大",
+        "original_values": {
+          "能量": 932.0,
+          "蛋白质": 13.0,
+          "脂肪": 10.0,
+          "碳水化合物": 20.0,
+          "钠": 120.0,
+          "钙": 385.0
+        }
+      }
+    ]
+  },
+  {
+    "url": "https://www.mcdonalds.com.cn/product/Hot-Oatly-Nai-Tie",
+    "name": "热燕麦奶铁",
+    "source_release": "2025-04",
+    "nutrition_tables": [
+      {
+        "portion_label": "小",
+        "original_values": {
+          "能量": 500.0,
+          "蛋白质": 3.0,
+          "脂肪": 5.0,
+          "碳水化合物": 16.0,
+          "钠": 81.0,
+          "钙": 248.0
+        }
+      },
+      {
+        "portion_label": "中",
+        "original_values": {
+          "能量": 697.0,
+          "蛋白质": 4.0,
+          "脂肪": 6.0,
+          "碳水化合物": 22.0,
+          "钠": 112.0,
+          "钙": 345.0
+        }
+      },
+      {
+        "portion_label": "大",
+        "original_values": {
+          "能量": 929.0,
+          "蛋白质": 5.0,
+          "脂肪": 8.0,
+          "碳水化合物": 29.0,
+          "钠": 152.0,
+          "钙": 464.0
+        }
+      }
+    ]
+  },
+  {
+    "url": "https://www.mcdonalds.com.cn/product/Hot-Caramel-Macchiato-2",
+    "name": "热焦糖玛奇朵",
+    "source_release": "2025-04",
+    "nutrition_tables": [
+      {
+        "portion_label": "中",
+        "original_values": {
+          "能量": 698.0,
+          "蛋白质": 9.0,
+          "脂肪": 7.0,
+          "碳水化合物": 15.0,
+          "钠": 88.0,
+          "钙": 284.7
+        }
+      }
+    ]
+  },
+  {
+    "url": "https://www.mcdonalds.com.cn/product/cone",
+    "name": "圆筒冰淇淋",
+    "source_release": "2025-04",
+    "nutrition_tables": [
+      {
+        "portion_label": "1个",
+        "original_values": {
+          "能量": 391.0,
+          "蛋白质": 2.0,
+          "脂肪": 3.0,
+          "碳水化合物": 14.0,
+          "钠": 36.0,
+          "钙": 77.0
+        }
+      }
+    ]
+  },
+  {
+    "url": "https://www.mcdonalds.com.cn/product/Oreo-Mcflurry",
+    "name": "奥利奥麦旋风",
+    "source_release": "2025-04",
+    "nutrition_tables": [
+      {
+        "portion_label": "1个",
+        "original_values": {
+          "能量": 1115.0,
+          "蛋白质": 5.0,
+          "脂肪": 9.0,
+          "碳水化合物": 40.0,
+          "钠": 116.0,
+          "钙": 185.0
+        }
+      }
+    ]
+  },
+  {
+    "url": "https://www.mcdonalds.com.cn/product/Strawberry-Sundae",
+    "name": "草莓新地",
+    "source_release": "2025-04",
+    "nutrition_tables": [
+      {
+        "portion_label": "1个",
+        "original_values": {
+          "能量": 1027.0,
+          "蛋白质": 4.0,
+          "脂肪": 6.0,
+          "碳水化合物": 43.0,
+          "钠": 84.0,
+          "钙": 158.0
+        }
+      }
+    ]
+  },
+  {
+    "url": "https://www.mcdonalds.com.cn/product/Taro-Pie",
+    "name": "香芋派",
+    "source_release": "2025-04",
+    "nutrition_tables": [
+      {
+        "portion_label": "1个",
+        "original_values": {
+          "能量": 971.0,
+          "蛋白质": 2.0,
+          "脂肪": 12.0,
+          "碳水化合物": 28.0,
+          "钠": 159.0,
+          "钙": 7.0
+        }
+      }
+    ]
+  },
+  {
+    "url": "https://www.mcdonalds.com.cn/product/pineapple-pie",
+    "name": "菠萝派",
+    "source_release": "2025-04",
+    "nutrition_tables": [
+      {
+        "portion_label": "1个",
+        "original_values": {
+          "能量": 925.0,
+          "蛋白质": 2.0,
+          "脂肪": 11.0,
+          "碳水化合物": 27.0,
+          "钠": 147.0,
+          "钙": 5.0
+        }
+      }
+    ]
+  },
+  {
+    "url": "https://www.mcdonalds.com.cn/product/Strawberry-Oreo-Mcflurry",
+    "name": "草莓麦旋风",
+    "source_release": "2025-04",
+    "nutrition_tables": [
+      {
+        "portion_label": "1个",
+        "original_values": {
+          "能量": 1234.0,
+          "蛋白质": 6.0,
+          "脂肪": 9.0,
+          "碳水化合物": 47.0,
+          "钠": 122.0,
+          "钙": 186.0
+        }
+      }
+    ]
+  }
+]

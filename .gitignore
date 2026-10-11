@@ -1,0 +1,13 @@
+.env
+.env.*
+!.env.example
+__pycache__/
+*.py[cod]
+.venv/
+data/*
+!data/.gitkeep
+!data/reference/
+!data/reference/**
+*.sqlite3*
+*.zip
+.DS_Store
